@@ -23,7 +23,7 @@ Utilities.getPreferenceValue = function (name) {
   const config = fs.readFileSync("config.xml").toString();
   let preferenceValue = Utilities.getPreferenceValueFromConfig(config, name);
   if (!preferenceValue) {
-    const packageJson = fs.readFileSync("package.json").toString();
+    const packageJson = fs.readFileSync("../../../package.json").toString();
     preferenceValue = Utilities.getPreferenceValueFromPackageJson(packageJson, name)
   }
   return preferenceValue
